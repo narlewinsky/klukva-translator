@@ -2,6 +2,7 @@ import './Board.css';
 import React, { Component } from 'react';
 import latinize from 'klukva-core';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { saveAs } from 'file-saver';
 import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
 import ImportIcon from './media/import.svg';
@@ -21,9 +22,8 @@ class Board extends Component {
     handleChange = (e) => {
         const content = e.target.value;
         const translation = latinize(e.target.value);
-        const textarea = document.querySelector('#Output');
 
-        textarea.scrollTop = textarea.scrollHeight;
+        document.querySelector('#Output').scrollTop = document.querySelector('#Output').scrollHeight;
 
         this.setState({
             content: content,
@@ -31,17 +31,22 @@ class Board extends Component {
         });
     }
 
-    upload() {
+    clear = (e) => {
+        document.querySelector('#Input').value = "";
+        document.querySelector('#Output').value = "";
     }
 
-    download() {
+    upload = (e) => {
+
     }
 
-    onCopy() {
+    export = (e) => {
+        var blob = new Blob([this.state.translation], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, "translation.txt");
+    }
+
+    onCopy = (e) => {
         console.log("Here must be a message box")
-    }
-
-    clear() {
     }
 
     render() {
@@ -50,7 +55,7 @@ class Board extends Component {
                 <div className="Board-Panel">
                     <div className="Board-Panel-Editor">
                         <textarea className="Board-Editor-TextArea"
-                                  id="input"
+                                  id="Input"
                                   placeholder="Введите сюда текст на кириллице"
                                   onChange={this.handleChange} />
                     </div>
@@ -58,12 +63,9 @@ class Board extends Component {
                     <div className="Board-Panel-Toolbar">
                         <div className="Board-Panel-ButtonGroup">
                             <button className="Board-Panel-Button">
-                                <img className="Icon" src={PasteIcon} />
-                            </button>
-                            <button className="Board-Panel-Button">
                                 <img className="Icon" src={ImportIcon} />
                             </button>
-                            <button className="Board-Panel-Button">
+                            <button className="Board-Panel-Button" onClick={this.clear}>
                                 <img className="Icon" src={ClearIcon} />
                             </button>
                         </div>
@@ -79,7 +81,7 @@ class Board extends Component {
                     <div className="Board-Panel-Separator" />
                     <div className="Board-Panel-Toolbar">
                         <div className="Board-Panel-ButtonGroup">
-                            <button className="Board-Panel-Button">
+                            <button className="Board-Panel-Button" onClick={this.export}>
                                 <img className="Icon" src={ExportIcon} />
                             </button>
                             <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
