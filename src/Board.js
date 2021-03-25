@@ -1,6 +1,7 @@
 import './Board.css';
 import React, { Component } from 'react';
 import latinize from 'klukva-core';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
 import ImportIcon from './media/import.svg';
@@ -11,14 +12,22 @@ class Board extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
-        this.state = { content: "" }
+        this.state = {
+            content: "",
+            translation: ""
+        }
     }
 
-    handleChange(e) {
+    handleChange = (e) => {
+        const content = e.target.value;
+        const translation = latinize(e.target.value);
         const textarea = document.querySelector('#Output');
+
         textarea.scrollTop = textarea.scrollHeight;
+
         this.setState({
-            content: e.target.value
+            content: content,
+            translation: translation
         });
     }
 
@@ -28,7 +37,8 @@ class Board extends Component {
     download() {
     }
 
-    copy() {
+    onCopy() {
+        console.log("Here must be a message box")
     }
 
     clear() {
@@ -64,7 +74,7 @@ class Board extends Component {
                     <div className="Board-Panel-Editor">
                         <textarea className="Board-Editor-TextArea"
                                   id="Output"
-                                  value={latinize(this.state.content)} />
+                                  value={this.state.translation} />
                     </div>
                     <div className="Board-Panel-Separator" />
                     <div className="Board-Panel-Toolbar">
@@ -72,9 +82,11 @@ class Board extends Component {
                             <button className="Board-Panel-Button">
                                 <img className="Icon" src={ExportIcon} />
                             </button>
-                            <button className="Board-Panel-Button">
-                                <img className="Icon" src={CopyIcon} />
-                            </button>
+                            <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
+                                <button className="Board-Panel-Button">
+                                    <img className="Icon" src={CopyIcon} />
+                                </button>
+                            </CopyToClipboard>
                         </div>
                     </div>
                 </div>
