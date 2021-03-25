@@ -5,8 +5,6 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { saveAs } from 'file-saver';
 import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
-import ImportIcon from './media/import.svg';
-import PasteIcon from './media/paste.svg';
 import ClearIcon from './media/clear.svg';
 
 class Board extends Component {
@@ -62,9 +60,6 @@ class Board extends Component {
                     <div className="Board-Panel-Separator" />
                     <div className="Board-Panel-Toolbar">
                         <div className="Board-Panel-ButtonGroup">
-                            <button className="Board-Panel-Button">
-                                <img className="Icon" src={ImportIcon} />
-                            </button>
                             <button className="Board-Panel-Button" onClick={this.clear}>
                                 <img className="Icon" src={ClearIcon} />
                             </button>
