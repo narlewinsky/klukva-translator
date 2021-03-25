@@ -26,6 +26,9 @@ class Board extends Component {
     copy() {
     }
 
+    clear() {
+    }
+
     render() {
         return (
             <div className="Board">

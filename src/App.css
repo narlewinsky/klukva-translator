@@ -50,3 +50,20 @@ p {
     font-weight: 300;
     line-height: 24px;
 }
+
+@media only screen and (max-width: 768px) {
+    .Header {
+        display: none;
+    }
+
+    .Logo {
+        top: 24px;
+        bottom: 24px;
+        left: 24px;
+    }
+
+    .Background {
+        height: 36vh;
+        width: 100vw;
+    }
+}
