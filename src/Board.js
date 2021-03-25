@@ -48,7 +48,6 @@ class Board extends Component {
                     <div className="Board-Panel-Editor">
                         <textarea className="Board-Editor-TextArea"
                                   id="Output"
-                                  placeholder="Введите сюда текст на кириллице"
                                   value={latinize(this.state.content)} />
                     </div>
                     <div className="Board-Panel-Separator" />
