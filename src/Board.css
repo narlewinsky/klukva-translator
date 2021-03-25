@@ -87,6 +87,17 @@ textarea::placeholder {
     cursor: pointer;
     border-radius: 48px;
     background: transparent;
+    transition: 0.48s;
+}
+
+.Board-Panel-Button:hover {
+    background: #f4f4f6;
+    transition: 0.32s;
+}
+
+.Board-Panel-Button:active {
+    background: #ececef;
+    transition: 0.08s;
 }
 
 .Icon {
