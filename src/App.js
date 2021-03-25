@@ -6,7 +6,7 @@ function App() {
     return (
         <div className="App">
             <div className="Background" />
-            <img className="Logo" src={logo} />
+            <img className="Logo" src={logo} alt="logo" />
             <div className="Header">
                 <div className="Header-Content">
                     <h1>PEREVOD NA RUSSKUJU LATINICU</h1>

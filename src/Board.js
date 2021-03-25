@@ -1,11 +1,13 @@
 import './Board.css';
 import React, { Component } from 'react';
-import latinize from 'klukva-core';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { saveAs } from 'file-saver';
+import latinize from 'klukva-core';
 import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
 import ClearIcon from './media/clear.svg';
+
+const modes = ["modern", "communist1", "communist2", "communist3"]
 
 class Board extends Component {
     constructor(props) {
@@ -13,13 +15,14 @@ class Board extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.state = {
             content: "",
-            translation: ""
+            translation: "",
+            mode: 0
         }
     }
 
     handleChange = (e) => {
         const content = e.target.value;
-        const translation = latinize(e.target.value);
+        const translation = latinize(e.target.value, modes[this.state.mode]);
 
         document.querySelector('#Output').scrollTop = document.querySelector('#Output').scrollHeight;
 
@@ -47,6 +50,14 @@ class Board extends Component {
         console.log("Here must be a message box")
     }
 
+    changeTranslator = (e) => {
+        const mode = (this.state.mode < 3) ? this.state.mode + 1 : 0;
+        this.setState({
+            mode: mode,
+            translation: latinize(this.state.content, modes[mode])
+        })
+    }
+
     render() {
         return (
             <div className="Board">
@@ -61,7 +72,7 @@ class Board extends Component {
                     <div className="Board-Panel-Toolbar">
                         <div className="Board-Panel-ButtonGroup">
                             <button className="Board-Panel-Button" onClick={this.clear}>
-                                <img className="Icon" src={ClearIcon} />
+                                <img className="Icon" src={ClearIcon} alt="clear" />
                             </button>
                         </div>
                     </div>
@@ -71,17 +82,22 @@ class Board extends Component {
                     <div className="Board-Panel-Editor">
                         <textarea className="Board-Editor-TextArea"
                                   id="Output"
+                                  style={{"pointer-events": "none"}}
                                   value={this.state.translation} />
                     </div>
                     <div className="Board-Panel-Separator" />
                     <div className="Board-Panel-Toolbar">
+                        <div className="Board-Panel-Switcher">
+                            <p className="Board-Panel-Switcher-Label">Reżim perevoda:</p>
+                            <button className="Board-Panel-Switcher-Button" onClick={this.changeTranslator}>{modes[this.state.mode]}</button>
+                        </div>
                         <div className="Board-Panel-ButtonGroup">
                             <button className="Board-Panel-Button" onClick={this.export}>
-                                <img className="Icon" src={ExportIcon} />
+                                <img className="Icon" src={ExportIcon} alt="export" />
                             </button>
                             <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
                                 <button className="Board-Panel-Button">
-                                    <img className="Icon" src={CopyIcon} />
+                                    <img className="Icon" src={CopyIcon} alt="copy" />
                                 </button>
                             </CopyToClipboard>
                         </div>
