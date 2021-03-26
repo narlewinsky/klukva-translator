@@ -1,6 +1,7 @@
 import './Board.css';
 import React, { Component } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import {ScrollSync, ScrollSyncPane} from "react-scroll-sync";
 import { saveAs } from 'file-saver';
 import latinize from 'klukva-core';
 import CopyIcon from './media/copy.svg';
@@ -60,50 +61,55 @@ class Board extends Component {
 
     render() {
         return (
-            <div className="Board">
-                <div className="Board-Panel">
-                    <div className="Board-Panel-Editor">
-                        <textarea className="Board-Editor-TextArea"
-                                  id="Input"
-                                  placeholder="Введите сюда текст на кириллице"
-                                  onChange={this.handleChange} />
-                    </div>
-                    <div className="Board-Panel-Separator" />
-                    <div className="Board-Panel-Toolbar">
-                        <div className="Board-Panel-ButtonGroup">
-                            <button className="Board-Panel-Button" onClick={this.clear}>
-                                <img className="Icon" src={ClearIcon} alt="clear" />
-                            </button>
+            <ScrollSync>
+                <div className="Board">
+                    <div className="Board-Panel">
+                        <div className="Board-Panel-Editor">
+                            <ScrollSyncPane>
+                            <textarea className="Board-Editor-TextArea"
+                                      id="Input"
+                                      placeholder="Введите сюда текст на кириллице"
+                                      onChange={this.handleChange} />
+                            </ScrollSyncPane>
                         </div>
-                    </div>
-                </div>
-                <div className="Board-Space" />
-                <div className="Board-Panel">
-                    <div className="Board-Panel-Editor">
-                        <textarea className="Board-Editor-TextArea"
-                                  id="Output"
-                                  style={{"pointer-events": "none"}}
-                                  value={this.state.translation} />
-                    </div>
-                    <div className="Board-Panel-Separator" />
-                    <div className="Board-Panel-Toolbar">
-                        <div className="Board-Panel-Switcher">
-                            <p className="Board-Panel-Switcher-Label">Reżim perevoda:</p>
-                            <button className="Board-Panel-Switcher-Button" onClick={this.changeTranslator}>{modes[this.state.mode]}</button>
-                        </div>
-                        <div className="Board-Panel-ButtonGroup">
-                            <button className="Board-Panel-Button" onClick={this.export}>
-                                <img className="Icon" src={ExportIcon} alt="export" />
-                            </button>
-                            <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
-                                <button className="Board-Panel-Button">
-                                    <img className="Icon" src={CopyIcon} alt="copy" />
+                        <div className="Board-Panel-Separator" />
+                        <div className="Board-Panel-Toolbar">
+                            <div className="Board-Panel-ButtonGroup">
+                                <button className="Board-Panel-Button" onClick={this.clear}>
+                                    <img className="Icon" src={ClearIcon} alt="clear" />
                                 </button>
-                            </CopyToClipboard>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Board-Space" />
+                    <div className="Board-Panel">
+                        <div className="Board-Panel-Editor">
+                            <ScrollSyncPane>
+                            <textarea className="Board-Editor-TextArea"
+                                      id="Output"
+                                      value={this.state.translation} />
+                            </ScrollSyncPane>
+                        </div>
+                        <div className="Board-Panel-Separator" />
+                        <div className="Board-Panel-Toolbar">
+                            <div className="Board-Panel-Switcher">
+                                <p className="Board-Panel-Switcher-Label">Reżim perevoda:</p>
+                                <button className="Board-Panel-Switcher-Button" onClick={this.changeTranslator}>{modes[this.state.mode]}</button>
+                            </div>
+                            <div className="Board-Panel-ButtonGroup">
+                                <button className="Board-Panel-Button" onClick={this.export}>
+                                    <img className="Icon" src={ExportIcon} alt="export" />
+                                </button>
+                                <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
+                                    <button className="Board-Panel-Button">
+                                        <img className="Icon" src={CopyIcon} alt="copy" />
+                                    </button>
+                                </CopyToClipboard>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </ScrollSync>
         )
     }
 }
