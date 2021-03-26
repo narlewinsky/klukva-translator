@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/klukva-translator/static/css/main.b1aa350e.chunk.css",
-    "main.js": "/klukva-translator/static/js/main.049bb571.chunk.js",
-    "main.js.map": "/klukva-translator/static/js/main.049bb571.chunk.js.map",
-    "runtime-main.js": "/klukva-translator/static/js/runtime-main.b8030548.js",
-    "runtime-main.js.map": "/klukva-translator/static/js/runtime-main.b8030548.js.map",
-    "static/js/2.868ee7ea.chunk.js": "/klukva-translator/static/js/2.868ee7ea.chunk.js",
-    "static/js/2.868ee7ea.chunk.js.map": "/klukva-translator/static/js/2.868ee7ea.chunk.js.map",
-    "static/js/3.f15b515c.chunk.js": "/klukva-translator/static/js/3.f15b515c.chunk.js",
-    "static/js/3.f15b515c.chunk.js.map": "/klukva-translator/static/js/3.f15b515c.chunk.js.map",
+    "main.css": "/klukva-translator/static/css/main.9ff88db6.chunk.css",
+    "main.js": "/klukva-translator/static/js/main.5c6d694f.chunk.js",
+    "main.js.map": "/klukva-translator/static/js/main.5c6d694f.chunk.js.map",
+    "runtime-main.js": "/klukva-translator/static/js/runtime-main.8d8a04fe.js",
+    "runtime-main.js.map": "/klukva-translator/static/js/runtime-main.8d8a04fe.js.map",
+    "static/js/2.d41fdf7c.chunk.js": "/klukva-translator/static/js/2.d41fdf7c.chunk.js",
+    "static/js/2.d41fdf7c.chunk.js.map": "/klukva-translator/static/js/2.d41fdf7c.chunk.js.map",
+    "static/js/3.1aba7d03.chunk.js": "/klukva-translator/static/js/3.1aba7d03.chunk.js",
+    "static/js/3.1aba7d03.chunk.js.map": "/klukva-translator/static/js/3.1aba7d03.chunk.js.map",
     "index.html": "/klukva-translator/index.html",
-    "static/css/main.b1aa350e.chunk.css.map": "/klukva-translator/static/css/main.b1aa350e.chunk.css.map",
-    "static/js/2.868ee7ea.chunk.js.LICENSE.txt": "/klukva-translator/static/js/2.868ee7ea.chunk.js.LICENSE.txt",
+    "static/css/main.9ff88db6.chunk.css.map": "/klukva-translator/static/css/main.9ff88db6.chunk.css.map",
+    "static/js/2.d41fdf7c.chunk.js.LICENSE.txt": "/klukva-translator/static/js/2.d41fdf7c.chunk.js.LICENSE.txt",
     "static/media/clear.960a9a98.svg": "/klukva-translator/static/media/clear.960a9a98.svg",
     "static/media/copy.7232b27a.svg": "/klukva-translator/static/media/copy.7232b27a.svg",
     "static/media/export.f0ae1084.svg": "/klukva-translator/static/media/export.f0ae1084.svg",
     "static/media/logo.3abb1590.svg": "/klukva-translator/static/media/logo.3abb1590.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8030548.js",
-    "static/js/2.868ee7ea.chunk.js",
-    "static/css/main.b1aa350e.chunk.css",
-    "static/js/main.049bb571.chunk.js"
+    "static/js/runtime-main.8d8a04fe.js",
+    "static/js/2.d41fdf7c.chunk.js",
+    "static/css/main.9ff88db6.chunk.css",
+    "static/js/main.5c6d694f.chunk.js"
   ]
 }
