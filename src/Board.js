@@ -2,6 +2,7 @@ import './Board.css';
 import React, { Component } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import {ScrollSync, ScrollSyncPane} from "react-scroll-sync";
+import ReactTooltip from 'react-tooltip';
 import { saveAs } from 'file-saver';
 import latinize from 'klukva-core';
 import CopyIcon from './media/copy.svg';
@@ -63,6 +64,7 @@ class Board extends Component {
         return (
             <ScrollSync>
                 <div className="Board">
+                    <ReactTooltip className="Board-Tooltip" effect="solid" backgroundColor="#040c1d" arrowColor="transparent" />
                     <div className="Board-Panel">
                         <div className="Board-Panel-Editor">
                             <ScrollSyncPane>
@@ -75,7 +77,7 @@ class Board extends Component {
                         <div className="Board-Panel-Separator" />
                         <div className="Board-Panel-Toolbar">
                             <div className="Board-Panel-ButtonGroup">
-                                <button className="Board-Panel-Button" onClick={this.clear}>
+                                <button className="Board-Panel-Button" data-tip="Oçistitj formu" onClick={this.clear}>
                                     <img className="Icon" src={ClearIcon} alt="clear" />
                                 </button>
                             </div>
@@ -97,11 +99,11 @@ class Board extends Component {
                                 <button className="Board-Panel-Switcher-Button" onClick={this.changeTranslator}>{modes[this.state.mode]}</button>
                             </div>
                             <div className="Board-Panel-ButtonGroup">
-                                <button className="Board-Panel-Button" onClick={this.export}>
+                                <button className="Board-Panel-Button" data-tip="Soxranitj perevod" onClick={this.export}>
                                     <img className="Icon" src={ExportIcon} alt="export" />
                                 </button>
                                 <CopyToClipboard onCopy={this.onCopy} text={this.state.translation}>
-                                    <button className="Board-Panel-Button">
+                                    <button className="Board-Panel-Button" data-tip="Skopirovatj perevod">
                                         <img className="Icon" src={CopyIcon} alt="copy" />
                                     </button>
                                 </CopyToClipboard>
