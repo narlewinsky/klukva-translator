@@ -18,19 +18,23 @@ class Board extends Component {
         this.state = {
             content: "",
             translation: "",
-            mode: 0
+            mode: 0,
+            characters: 0,
+            limit: 10000
         }
     }
 
     handleChange = (e) => {
         const content = e.target.value;
         const translation = latinize(e.target.value, modes[this.state.mode]);
+        const characters = e.target.value.length;
 
         document.querySelector('#Output').scrollTop = document.querySelector('#Output').scrollHeight;
 
         this.setState({
             content: content,
-            translation: translation
+            translation: translation,
+            characters: characters
         });
     }
 
@@ -71,11 +75,15 @@ class Board extends Component {
                             <textarea className="Board-Editor-TextArea"
                                       id="Input"
                                       placeholder="Введите сюда текст на кириллице"
+                                      maxlength={this.state.limit}
                                       onChange={this.handleChange} />
                             </ScrollSyncPane>
                         </div>
                         <div className="Board-Panel-Separator" />
                         <div className="Board-Panel-Toolbar">
+                            <div className="Board-Panel-Counter">
+                                <p className="Board-Panel-Counter-Label">{this.state.characters} / {this.state.limit}</p>
+                            </div>
                             <div className="Board-Panel-ButtonGroup">
                                 <button className="Board-Panel-Button" data-tip="Oçistitj formu" onClick={this.clear}>
                                     <img className="Icon" src={ClearIcon} alt="clear" />

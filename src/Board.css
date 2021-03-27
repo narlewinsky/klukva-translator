@@ -149,6 +149,23 @@ textarea::placeholder {
     text-transform: uppercase;
 }
 
+.Board-Panel-Counter {
+    display: flex;
+    margin-left: 28px;
+}
+
+.Board-Panel-Counter-Label {
+    margin: auto;
+    margin-right: 8px;
+    padding: 0;
+    color: #242c3d;
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
 @media only screen and (max-width: 768px) {
     .Board {
         top: 96px;
