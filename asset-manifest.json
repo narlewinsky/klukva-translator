@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/klukva-translator/static/css/main.6a1d9a4d.chunk.css",
-    "main.js": "/klukva-translator/static/js/main.f3f239a4.chunk.js",
-    "main.js.map": "/klukva-translator/static/js/main.f3f239a4.chunk.js.map",
+    "main.css": "/klukva-translator/static/css/main.8db6dc45.chunk.css",
+    "main.js": "/klukva-translator/static/js/main.14eca6a3.chunk.js",
+    "main.js.map": "/klukva-translator/static/js/main.14eca6a3.chunk.js.map",
     "runtime-main.js": "/klukva-translator/static/js/runtime-main.971102d0.js",
     "runtime-main.js.map": "/klukva-translator/static/js/runtime-main.971102d0.js.map",
     "static/js/2.1d644e3b.chunk.js": "/klukva-translator/static/js/2.1d644e3b.chunk.js",
@@ -10,17 +10,17 @@
     "static/js/3.6709cb7c.chunk.js": "/klukva-translator/static/js/3.6709cb7c.chunk.js",
     "static/js/3.6709cb7c.chunk.js.map": "/klukva-translator/static/js/3.6709cb7c.chunk.js.map",
     "index.html": "/klukva-translator/index.html",
-    "static/css/main.6a1d9a4d.chunk.css.map": "/klukva-translator/static/css/main.6a1d9a4d.chunk.css.map",
+    "static/css/main.8db6dc45.chunk.css.map": "/klukva-translator/static/css/main.8db6dc45.chunk.css.map",
     "static/js/2.1d644e3b.chunk.js.LICENSE.txt": "/klukva-translator/static/js/2.1d644e3b.chunk.js.LICENSE.txt",
     "static/media/clear.960a9a98.svg": "/klukva-translator/static/media/clear.960a9a98.svg",
     "static/media/copy.7232b27a.svg": "/klukva-translator/static/media/copy.7232b27a.svg",
     "static/media/export.f0ae1084.svg": "/klukva-translator/static/media/export.f0ae1084.svg",
-    "static/media/logo.3abb1590.svg": "/klukva-translator/static/media/logo.3abb1590.svg"
+    "static/media/logo.0a58b208.svg": "/klukva-translator/static/media/logo.0a58b208.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.971102d0.js",
     "static/js/2.1d644e3b.chunk.js",
-    "static/css/main.6a1d9a4d.chunk.css",
-    "static/js/main.f3f239a4.chunk.js"
+    "static/css/main.8db6dc45.chunk.css",
+    "static/js/main.14eca6a3.chunk.js"
   ]
 }
