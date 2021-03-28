@@ -103,7 +103,7 @@ class Board extends Component {
                         <div className="Board-Panel-Separator" />
                         <div className="Board-Panel-Toolbar">
                             <div className="Board-Panel-Switcher">
-                                <p className="Board-Panel-Switcher-Label">Reżim perevoda:</p>
+                                <p className="Board-Panel-Switcher-Label">Reżim:</p>
                                 <button className="Board-Panel-Switcher-Button" onClick={this.changeTranslator}>{modes[this.state.mode]}</button>
                             </div>
                             <div className="Board-Panel-ButtonGroup">

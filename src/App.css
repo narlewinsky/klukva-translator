@@ -35,9 +35,10 @@
 h1 {
     margin: 0;
     color: #242C3D;
-    font-family: 'Helvetica Neue Condensed Black', Helvetica;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue Condensed Bold', 'Helvetica Neue', 'Barlow Condensed', Helvetica;
     font-size: 48px;
-    font-weight: 300;
+    font-weight: 700;
+    font-stretch: condensed;
     line-height: 40px;
 }
 
@@ -45,7 +46,7 @@ p {
     margin: 0;
     margin-top: 24px;
     color: #242C3D;
-    font-family: 'Helvetica Neue', Helvetica;
+    font-family: 'Helvetica Neue', 'Raleway', Helvetica;
     font-size: 18px;
     font-weight: 300;
     line-height: 28px;

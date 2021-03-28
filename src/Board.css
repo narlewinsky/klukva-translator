@@ -55,7 +55,7 @@ textarea {
     background: none;
     resize: none;
     color: #50596a;
-    font-family: 'Helvetica Neue', Helvetica;
+    font-family: 'Helvetica Neue', 'Raleway', Helvetica;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -132,19 +132,9 @@ textarea::placeholder {
     padding: 0;
     cursor: pointer;
     color: #c3375e;
-    font-family: 'Helvetica Neue', Helvetica;
+    font-family: 'Helvetica Neue', 'Raleway', Helvetica;
     font-size: 12px;
     font-weight: 500;
-    line-height: 24px;
-    text-transform: uppercase;
-}
-
-.Board-Tooltip {
-    padding: 4px 12px 4px 12px !important;
-    color: #ffffff !important;
-    font-family: 'Helvetica Neue', Helvetica;
-    font-size: 12px !important;
-    font-weight: 300;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -159,9 +149,19 @@ textarea::placeholder {
     margin-right: 8px;
     padding: 0;
     color: #242c3d;
-    font-family: 'Helvetica Neue', Helvetica;
+    font-family: 'Helvetica Neue', 'Raleway', Helvetica;
     font-size: 12px;
     font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.Board-Tooltip {
+    padding: 4px 12px 4px 12px !important;
+    color: #ffffff !important;
+    font-family: 'Helvetica Neue', 'Raleway', Helvetica;
+    font-size: 12px !important;
+    font-weight: 300;
     line-height: 24px;
     text-transform: uppercase;
 }
