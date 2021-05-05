@@ -1,6 +1,6 @@
 {
     "name": "klukva-translator",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Perevodçik iz russkoj latinicy v russkuju kirillicu",
     "author": "Nar Lewinsky",
     "license": "MIT",
@@ -22,7 +22,7 @@
         "@testing-library/react": "^11.2.5",
         "@testing-library/user-event": "^12.8.3",
         "file-saver": "^2.0.5",
-        "klukva-core": "^1.0.4",
+        "klukva-core": "^1.2.1",
         "react": "^17.0.2",
         "react-copy-to-clipboard": "^5.0.3",
         "react-dom": "^17.0.2",

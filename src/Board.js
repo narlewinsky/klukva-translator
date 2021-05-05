@@ -9,7 +9,7 @@ import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
 import ClearIcon from './media/clear.svg';
 
-const modes = ["modern", "communist1", "communist2", "communist3"]
+const modes = ["klükva", "jakovlev-1", "jakovlev-2", "jakovlev-3"]
 
 class Board extends Component {
     constructor(props) {

@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+@font-face {
+  font-family: 'HelveticaNeue-Local';
+  src: local('HelveticaNeue-Local'), url(./typeface/HelveticaNeue.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-CondensedBlack-Local';
+  src: local('HelveticaNeue-CondensedBlack-Local'), url(./typeface/HelveticaNeue-CondensedBlack.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Light-Local';
+  src: local('HelveticaNeue-Light-Local'), url(./typeface/HelveticaNeue-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Medium-Local';
+  src: local('HelveticaNeue-Medium-Local'), url(./typeface/HelveticaNeue-Medium.ttf) format('truetype');
+}
+
+
 body {
     margin: 0;
     padding: 0;
-    background: #242c3d;
+    background: #202839;
 }
