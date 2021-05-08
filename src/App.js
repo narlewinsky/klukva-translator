@@ -11,11 +11,9 @@ function App() {
                 <div className="Header-Content">
                     <h1>PEREVOD NA LATINICU EPOXI RUSSKOGO AVANGARDA</h1>
                     <p>
-                    Zdesj możno perevesti tekst na russkom jazyke iz
-                    kirilliçeskogo alfavita v latinskoje pisjmo sovetskoj epoxi
-                    (tri varianta, predlożennyje komissijej latinizacii vo glave s professorom Jakovlevym)
-                    i v sovremennyj variant latinicy pod kodovym nazvanijem "Klükva",
-                    osnovannym na principax sovetskix prektov.
+                    Zdesj możno perevesti tekst na russkom jazyke iz kirillicy v varianty latinskogo pisjma sovetstkoj epoxi
+                    (tri versii, predlożennyje komissijej po latinizacii vo glave s professorom Jakovlevym), a także v
+                    sovremennuju adaptaciju etix projektov pod kodovym nazvanijem "Klükva".
                     </p>
                     <p>Versija: 0.2.0<br/>Avtor: <a href="http://narlewinsky.online">Nar Lewinsky ➦</a></p>
                 </div>
