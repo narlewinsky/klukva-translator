@@ -9,7 +9,7 @@ import CopyIcon from './media/copy.svg';
 import ExportIcon from './media/export.svg';
 import ClearIcon from './media/clear.svg';
 
-const modes = ["klükva", "jakovlev-1", "jakovlev-2", "jakovlev-3"]
+const modes = ["klukva", "modern", "jakovlev-1", "jakovlev-2", "jakovlev-3"]
 
 class Board extends Component {
     constructor(props) {
@@ -57,7 +57,7 @@ class Board extends Component {
     }
 
     changeTranslator = (e) => {
-        const mode = (this.state.mode < 3) ? this.state.mode + 1 : 0;
+        const mode = (this.state.mode < 4 ) ? this.state.mode + 1 : 0;
         this.setState({
             mode: mode,
             translation: latinize(this.state.content, modes[mode])
